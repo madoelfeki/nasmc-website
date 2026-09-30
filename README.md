@@ -1,2 +1,8 @@
-# nasmc-website
-Official Digital Gateway of the National Airspace Management Center (NASMC) — Institutional Website &amp; Future Digital Ecosystem
+NASMC Official Website
+Project Overview
+Architecture
+Development Guidelines
+Environment Setup
+Deployment
+Content Governance
+Security
