@@ -2424,3 +2424,181 @@ a.secondary:hover {
     padding-right: 22px;
   }
 }
+
+
+/* =========================================
+   HOMEPAGE DENSITY POLISH
+   ========================================= */
+
+@media (min-width: 761px) {
+  .aboutSection {
+    padding: 88px 0;
+  }
+
+  .aboutContainer {
+    gap: 60px;
+  }
+
+  .aboutVisual {
+    width: min(100%, 440px);
+  }
+
+  .aboutTitle {
+    max-width: 600px;
+    font-size: clamp(2.5rem, 4vw, 4.1rem);
+  }
+
+  .aboutText {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .aboutLink {
+    margin-top: 24px;
+  }
+
+  .roleSection {
+    padding: 88px 0;
+  }
+
+  .roleTitle {
+    max-width: 760px;
+    font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+  }
+
+  .roleText {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .roleGrid {
+    margin-top: 46px;
+  }
+
+  .roleCard {
+    min-height: 215px;
+    padding: 26px 24px 28px;
+  }
+
+  .roleNumber {
+    margin-bottom: 30px;
+  }
+
+  .roleCard p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .roleLinkWrap {
+    margin-top: 28px;
+  }
+
+  .airspaceSection {
+    padding: 90px 0;
+  }
+
+  .airspaceContainer {
+    gap: 55px;
+  }
+
+  .airspaceTitle {
+    font-size: clamp(2.8rem, 4.5vw, 4.7rem);
+  }
+
+  .airspaceText {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .airspaceLink {
+    margin-top: 24px;
+  }
+
+  .airspaceVisual {
+    aspect-ratio: 1.28 / 1;
+    border-radius: 24px;
+  }
+}
+
+/* =========================================
+   OUR ROLE DETAIL PAGE
+   ========================================= */
+
+.role-detail-page {
+  min-height: 100vh;
+  background: var(--nasmc-white);
+  color: var(--nasmc-text);
+}
+
+.role-detail-hero {
+  padding: 150px 24px 90px;
+  background:
+    radial-gradient(
+      circle at 82% 35%,
+      rgba(11, 95, 165, 0.12),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      var(--nasmc-hero-start),
+      var(--nasmc-hero-end)
+    );
+}
+
+.role-detail-inner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.role-detail-eyebrow {
+  margin: 0 0 18px;
+  color: var(--nasmc-blue);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+}
+
+.role-detail-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3.2rem, 6vw, 6.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.role-detail-hero p {
+  max-width: 620px;
+  margin: 28px 0 0;
+  color: var(--nasmc-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.role-detail-back {
+  display: inline-flex;
+  margin-top: 28px;
+  color: var(--nasmc-text);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.role-detail-back:hover {
+  color: var(--nasmc-blue);
+}
+
+@media (max-width: 760px) {
+  .role-detail-hero {
+    padding: 110px 20px 70px;
+  }
+
+  .role-detail-inner {
+    width: 100%;
+  }
+
+  .role-detail-hero h1 {
+    font-size: clamp(2.7rem, 11vw, 4.2rem);
+  }
+}

@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import LanguageSelector from "./components/LanguageSelector";
 import AppearanceSelector from "./components/AppearanceSelector";
-import CoreAreas from "./components/CoreAreas";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -655,12 +654,6 @@ export default function Home() {
 
           </div>
         </section>
-
-        {/* =========================================
-            CORE AREAS
-            ========================================= */}
-
-        <CoreAreas />
 
       </main>
     </div>
