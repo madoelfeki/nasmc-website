@@ -8,9 +8,9 @@
 
 .main {
   width: 100%;
-  padding-top: 80px;
+  padding-top: 88px;
   max-width: none;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 88px);
   margin: 0;
   background: transparent;
 }
