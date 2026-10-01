@@ -208,30 +208,35 @@ export default function Home() {
               >
                 About NASMC
               </Link>
+
               <Link
                 href="/our-role"
                 onClick={() => setMenuOpen(false)}
               >
                 Our Role
               </Link>
+
               <Link
                 href="/about/leadership"
                 onClick={() => setMenuOpen(false)}
               >
                 Leadership
               </Link>
+
               <Link
                 href="/about/mission-vision"
                 onClick={() => setMenuOpen(false)}
               >
                 Mission & Vision
               </Link>
+
               <Link
                 href="/about/organizational-structure"
                 onClick={() => setMenuOpen(false)}
               >
                 Organizational Structure
               </Link>
+
               <Link
                 href="/about/legal-basis"
                 onClick={() => setMenuOpen(false)}
@@ -256,18 +261,21 @@ export default function Home() {
               >
                 Services
               </Link>
+
               <Link
                 href="/projects"
                 onClick={() => setMenuOpen(false)}
               >
                 Projects & Initiatives
               </Link>
+
               <Link
                 href="/training"
                 onClick={() => setMenuOpen(false)}
               >
                 Training
               </Link>
+
               <Link
                 href="/research"
                 onClick={() => setMenuOpen(false)}
@@ -292,18 +300,21 @@ export default function Home() {
               >
                 News
               </Link>
+
               <Link
                 href="/announcements"
                 onClick={() => setMenuOpen(false)}
               >
                 Announcements
               </Link>
+
               <Link
                 href="/documents"
                 onClick={() => setMenuOpen(false)}
               >
                 Publications & Documents
               </Link>
+
               <Link
                 href="/media"
                 onClick={() => setMenuOpen(false)}
@@ -313,7 +324,10 @@ export default function Home() {
             </div>
           )}
 
-          <Link href="/contact" onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/contact"
+            onClick={() => setMenuOpen(false)}
+          >
             Contact
           </Link>
 
@@ -377,7 +391,10 @@ export default function Home() {
                 Discover NASMC
               </Link>
 
-              <Link href="/our-role" className={styles.secondary}>
+              <Link
+                href="/our-role"
+                className={styles.secondary}
+              >
                 Explore Our Role
               </Link>
             </div>
@@ -396,6 +413,74 @@ export default function Home() {
             </div>
 
             <div className="flight-dot" />
+          </div>
+        </section>
+
+        {/* =========================================
+            ABOUT NASMC
+            ========================================= */}
+
+        <section className={styles.aboutSection}>
+          <div className={styles.aboutContainer}>
+            <div className={styles.aboutContent}>
+              <p className={styles.sectionEyebrow}>
+                ABOUT NASMC
+              </p>
+
+              <h2 className={styles.aboutTitle}>
+                Supporting the development and efficient use of
+                Egypt&apos;s airspace.
+              </h2>
+
+              <p className={styles.aboutText}>
+                The National Airspace Management Center is a public
+                economic authority established to support the
+                development, planning and efficient management of
+                Egypt&apos;s airspace, within its defined legal
+                mandate.
+              </p>
+
+              <Link
+                href="/about"
+                className={styles.aboutLink}
+              >
+                Explore the Center
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
+            <div
+              className={styles.aboutVisual}
+              aria-hidden="true"
+            >
+              <div className={styles.aboutVisualGrid} />
+
+              <div
+  className={`${styles.aboutOrbit} ${styles.aboutOrbitOne}`}
+/>
+
+<div
+  className={`${styles.aboutOrbit} ${styles.aboutOrbitTwo}`}
+/>
+
+<div
+  className={`${styles.aboutOrbit} ${styles.aboutOrbitThree}`}
+/>
+
+              <div className={styles.aboutCenterPoint}>
+                <span />
+              </div>
+
+              <div
+                className={`${styles.aboutNode} ${styles.aboutNodeOne}`}
+              />
+              <div
+                className={`${styles.aboutNode} ${styles.aboutNodeTwo}`}
+              />
+              <div
+                className={`${styles.aboutNode} ${styles.aboutNodeThree}`}
+              />
+            </div>
           </div>
         </section>
       </main>

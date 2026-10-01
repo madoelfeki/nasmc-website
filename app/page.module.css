@@ -631,3 +631,406 @@ a.secondary:hover {
     background-size: 48px 48px;
   }
 }
+
+/* =========================================
+   ABOUT NASMC
+   ========================================= */
+
+.aboutSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  padding: 120px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--nasmc-white) 0%,
+      rgba(11, 95, 165, 0.025) 100%
+    );
+
+  border-top: 1px solid var(--nasmc-border);
+}
+
+.aboutContainer {
+  position: relative;
+
+  width: min(1180px, calc(100% - 96px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+
+  align-items: center;
+
+  gap: 90px;
+}
+
+.aboutContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 620px;
+}
+
+.sectionEyebrow {
+  margin: 0 0 18px;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+
+  color: var(--nasmc-blue);
+
+  text-transform: uppercase;
+}
+
+.aboutTitle {
+  margin: 0;
+
+  max-width: 680px;
+
+  font-size: clamp(2.6rem, 4.5vw, 4.6rem);
+  font-weight: 650;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+
+  color: var(--nasmc-text);
+
+  text-wrap: balance;
+}
+
+.aboutText {
+  margin: 28px 0 0;
+
+  max-width: 610px;
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+
+  color: var(--nasmc-muted);
+}
+
+.aboutLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 34px;
+
+  min-height: 48px;
+
+  color: var(--nasmc-text);
+
+  font-size: 0.96rem;
+  font-weight: 650;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
+}
+
+.aboutLink span {
+  font-size: 1.2rem;
+
+  transition: transform 0.2s ease;
+}
+
+.aboutLink:hover {
+  color: var(--nasmc-blue);
+  gap: 16px;
+}
+
+.aboutLink:hover span {
+  transform: translateX(3px);
+}
+
+/* =========================================
+   ABOUT AIRSPACE VISUAL
+   ========================================= */
+
+.aboutVisual {
+  position: relative;
+
+  width: min(100%, 560px);
+  aspect-ratio: 1 / 1;
+
+  justify-self: end;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(11, 95, 165, 0.10);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(11, 95, 165, 0.075),
+      transparent 48%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(11, 95, 165, 0.035),
+      transparent 65%
+    );
+
+  box-shadow:
+    inset 0 0 80px rgba(11, 95, 165, 0.025);
+}
+
+.aboutVisualGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(11, 95, 165, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 95, 165, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  mask-image: radial-gradient(
+    circle,
+    black 0%,
+    rgba(0, 0, 0, 0.7) 55%,
+    transparent 78%
+  );
+}
+
+.aboutOrbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border: 1px solid rgba(11, 95, 165, 0.15);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.aboutOrbitOne {
+  width: 78%;
+  height: 78%;
+}
+
+.aboutOrbitTwo {
+  width: 57%;
+  height: 57%;
+
+  border-color: rgba(11, 95, 165, 0.20);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(28deg)
+    scaleY(0.58);
+}
+
+.aboutOrbitThree {
+  width: 39%;
+  height: 39%;
+
+  border-color: rgba(200, 162, 77, 0.28);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-22deg)
+    scaleX(1.35);
+}
+
+.aboutCenterPoint {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 24px;
+  height: 24px;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid var(--nasmc-blue);
+  border-radius: 50%;
+
+  background: var(--nasmc-white);
+
+  box-shadow:
+    0 0 0 10px rgba(11, 95, 165, 0.055),
+    0 0 40px rgba(11, 95, 165, 0.16);
+}
+
+.aboutCenterPoint span {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: var(--nasmc-blue);
+}
+
+.aboutNode {
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--nasmc-blue);
+
+  box-shadow:
+    0 0 0 6px rgba(11, 95, 165, 0.07),
+    0 0 22px rgba(11, 95, 165, 0.18);
+}
+
+.aboutNodeOne {
+  left: 18%;
+  top: 34%;
+}
+
+.aboutNodeTwo {
+  right: 17%;
+  top: 27%;
+
+  background: var(--nasmc-gold);
+
+  box-shadow:
+    0 0 0 6px rgba(200, 162, 77, 0.07),
+    0 0 22px rgba(200, 162, 77, 0.18);
+}
+
+.aboutNodeThree {
+  right: 24%;
+  bottom: 18%;
+}
+
+/* =========================================
+   ABOUT — TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .aboutSection {
+    padding: 100px 0;
+  }
+
+  .aboutContainer {
+    width: min(900px, calc(100% - 72px));
+
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+
+    gap: 56px;
+  }
+
+  .aboutTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .aboutText {
+    font-size: 1.04rem;
+  }
+}
+
+/* =========================================
+   ABOUT — MOBILE
+   ========================================= */
+
+@media (max-width: 760px) {
+  .aboutSection {
+    padding: 84px 24px;
+  }
+
+  .aboutContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 54px;
+  }
+
+  .aboutContent {
+    max-width: 100%;
+  }
+
+  .aboutTitle {
+    max-width: 100%;
+
+    font-size: clamp(2.55rem, 10vw, 3.8rem);
+    line-height: 1;
+  }
+
+  .aboutText {
+    max-width: 100%;
+
+    margin-top: 24px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .aboutLink {
+    margin-top: 28px;
+  }
+
+  .aboutVisual {
+    width: min(100%, 460px);
+
+    align-self: center;
+  }
+}
+
+/* =========================================
+   ABOUT — SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 72px 20px;
+  }
+
+  .aboutContainer {
+    gap: 44px;
+  }
+
+  .sectionEyebrow {
+    margin-bottom: 15px;
+
+    font-size: 0.7rem;
+  }
+
+  .aboutTitle {
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+    line-height: 1.02;
+  }
+
+  .aboutText {
+    font-size: 0.98rem;
+  }
+
+  .aboutVisual {
+    width: 100%;
+  }
+
+  .aboutVisualGrid {
+    background-size: 34px 34px;
+  }
+}
