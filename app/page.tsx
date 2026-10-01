@@ -13,27 +13,37 @@ export default function Home() {
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as HTMLElement;
 
+    // Close mobile menu when clicking outside it
     if (
+      menuOpen &&
       !target.closest(".mobile-menu") &&
       !target.closest(".mobile-menu-button")
     ) {
       setMenuOpen(false);
     }
+
+    // Close desktop/mobile dropdown when clicking outside it
+    if (
+      openMenu &&
+      !target.closest(".nav-dropdown") &&
+      !target.closest(".mobile-menu")
+    ) {
+      setOpenMenu(null);
+    }
   };
 
-  if (menuOpen) {
-    document.addEventListener("click", handleClickOutside);
-  }
+  document.addEventListener("click", handleClickOutside);
 
   return () => {
     document.removeEventListener("click", handleClickOutside);
   };
-}, [menuOpen]);
+}, [menuOpen, openMenu]);
+  
   const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   const toggleMenu = (menu: string) => {
-    setOpenMenu(openMenu === menu ? null : menu);
-  };
+  setOpenMenu((current) => (current === menu ? null : menu));
+};
 
   return (
     <div className={styles.page}>
