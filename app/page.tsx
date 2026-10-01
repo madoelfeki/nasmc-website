@@ -6,6 +6,10 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import LanguageSelector from "./components/LanguageSelector";
 import AppearanceSelector from "./components/AppearanceSelector";
+import ProjectsNews from "./components/ProjectsNews";
+import HomepageCompletion, {
+  HomepageFooter,
+} from "./components/HomepageCompletion";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -464,32 +468,12 @@ export default function Home() {
               className={styles.aboutVisual}
               aria-hidden="true"
             >
-              <div className={styles.aboutVisualGrid} />
-
-              <div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitOne}`}
-/>
-
-<div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitTwo}`}
-/>
-
-<div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitThree}`}
-/>
-
-              <div className={styles.aboutCenterPoint}>
-                <span />
-              </div>
-
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeOne}`}
-              />
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeTwo}`}
-              />
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeThree}`}
+              <Image
+                src="/images/about-nasmc-airspace-v2.png"
+                alt=""
+                fill
+                sizes="(max-width: 480px) calc(100vw - 40px), (max-width: 760px) calc(100vw - 48px), 440px"
+                className={styles.aboutVisualImage}
               />
             </div>
           </div>
@@ -655,7 +639,85 @@ export default function Home() {
           </div>
         </section>
 
+        {/* =========================================
+            DIGITAL GATEWAY
+            ========================================= */}
+
+        <section className={styles.digitalGatewaySection}>
+          <div className={styles.digitalGatewayContainer}>
+            <div className={styles.digitalGatewayHeader}>
+              <div>
+                <p className={styles.sectionEyebrow}>DIGITAL GATEWAY</p>
+                <h2 className={styles.digitalGatewayTitle}>
+                  A connected digital future.
+                </h2>
+              </div>
+
+              <p className={styles.digitalGatewayIntro}>
+                Explore current NASMC information and discover the future
+                digital services planned for this gateway.
+              </p>
+            </div>
+
+            <div className={styles.digitalGatewayGrid}>
+              <article className={`${styles.digitalGatewayCard} ${styles.digitalGatewayCardAvailable}`}>
+                <div className={styles.digitalGatewayCardTop}>
+                  <span className={styles.digitalGatewayNumber}>01</span>
+                  <span className={`${styles.digitalGatewayStatus} ${styles.digitalGatewayStatusAvailable}`}>
+                    Available now
+                  </span>
+                </div>
+
+                <h3>NASMC information</h3>
+                <p>
+                  Read about the Center&apos;s role and areas of work.
+                </p>
+
+                <Link href="/our-role" className={styles.digitalGatewayLink}>
+                  Explore our role <span aria-hidden="true">→</span>
+                </Link>
+              </article>
+
+              <article className={styles.digitalGatewayCard}>
+                <div className={styles.digitalGatewayCardTop}>
+                  <span className={styles.digitalGatewayNumber}>02</span>
+                  <span className={styles.digitalGatewayStatus}>
+                    Future digital services
+                  </span>
+                </div>
+
+                <h3>Digital services</h3>
+                <p>
+                  A future home for official online services as they become
+                  available.
+                </p>
+              </article>
+
+              <article className={styles.digitalGatewayCard}>
+                <div className={styles.digitalGatewayCardTop}>
+                  <span className={styles.digitalGatewayNumber}>03</span>
+                  <span className={styles.digitalGatewayStatus}>
+                    Future digital services
+                  </span>
+                </div>
+
+                <h3>Training &amp; knowledge</h3>
+                <p>
+                  A future space for official learning resources and
+                  publications.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <ProjectsNews />
+
+        <HomepageCompletion />
+
       </main>
+
+      <HomepageFooter />
     </div>
   );
 }

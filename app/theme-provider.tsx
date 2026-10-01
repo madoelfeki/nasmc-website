@@ -61,6 +61,8 @@ export default function ThemeProvider({
       ? savedTheme
       : "system";
 
+  // Restore browser-only state after hydration to keep the server snapshot stable.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   setTheme(initialTheme);
 
   const effectiveTheme =

@@ -60,6 +60,8 @@ useEffect(() => {
 }, [open]);
 
   useEffect(() => {
+    // Defer theme controls until hydration so server and client markup match.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
