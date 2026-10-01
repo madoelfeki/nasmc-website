@@ -10,8 +10,22 @@ import AppearanceSelector from "./components/AppearanceSelector";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -56,7 +70,9 @@ export default function Home() {
           HEADER
           ========================================= */}
 
-      <header className="site-header">
+      <header
+        className={`site-header${isScrolled ? " site-header-scrolled" : ""}`}
+      >
         {/* Logo */}
         <div className="brand">
           <Link href="/" aria-label="NASMC Home">
