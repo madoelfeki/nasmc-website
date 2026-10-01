@@ -433,6 +433,70 @@ export default function Home() {
         </section>
 
         {/* =========================================
+            ABOUT NASMC
+            ========================================= */}
+
+        <section className={styles.aboutSection}>
+          <div className={styles.aboutContainer}>
+            <div className={styles.aboutContent}>
+              <p className={styles.sectionEyebrow}>
+                ABOUT NASMC
+              </p>
+
+              <h2 className={styles.aboutTitle}>
+                A national institution dedicated to the development and optimal use of airspace.
+              </h2>
+
+              <p className={styles.aboutText}>
+                The National Airspace Management Center is a public economic authority established to support the development, planning and optimal use of airspace within its defined legal mandate.
+              </p>
+
+              <Link
+                href="/about"
+                className={styles.aboutLink}
+              >
+                Explore the Center
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
+            <div
+              className={styles.aboutVisual}
+              aria-hidden="true"
+            >
+              <div className={styles.aboutVisualGrid} />
+
+              <div
+  className={`${styles.aboutOrbit} ${styles.aboutOrbitOne}`}
+/>
+
+<div
+  className={`${styles.aboutOrbit} ${styles.aboutOrbitTwo}`}
+/>
+
+<div
+  className={`${styles.aboutOrbit} ${styles.aboutOrbitThree}`}
+/>
+
+              <div className={styles.aboutCenterPoint}>
+                <span />
+              </div>
+
+              <div
+                className={`${styles.aboutNode} ${styles.aboutNodeOne}`}
+              />
+              <div
+                className={`${styles.aboutNode} ${styles.aboutNodeTwo}`}
+              />
+              <div
+                className={`${styles.aboutNode} ${styles.aboutNodeThree}`}
+              />
+            </div>
+          </div>
+        </section>
+
+
+        {/* =========================================
             OUR ROLE
             ========================================= */}
 
@@ -442,13 +506,12 @@ export default function Home() {
               <p className={styles.sectionEyebrow}>OUR ROLE</p>
 
               <h2 className={styles.roleTitle}>
-                Supporting the planning, development and efficient use of
-                Egypt&apos;s airspace.
+                Supporting the planning, development and efficient use of airspace.
               </h2>
 
               <p className={styles.roleText}>
                 NASMC works within its defined legal mandate to support the
-                planning, development and optimal use of Egypt&apos;s airspace,
+                planning, development and optimal use of airspace,
                 and to contribute to the safety and efficiency of air navigation
                 services.
               </p>
@@ -501,73 +564,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* =========================================
-            ABOUT NASMC
-            ========================================= */}
-
-        <section className={styles.aboutSection}>
-          <div className={styles.aboutContainer}>
-            <div className={styles.aboutContent}>
-              <p className={styles.sectionEyebrow}>
-                ABOUT NASMC
-              </p>
-
-              <h2 className={styles.aboutTitle}>
-                Supporting the development and efficient use of
-                Egypt&apos;s airspace.
-              </h2>
-
-              <p className={styles.aboutText}>
-                The National Airspace Management Center is a public
-                economic authority established to support the
-                development, planning and efficient management of
-                Egypt&apos;s airspace, within its defined legal
-                mandate.
-              </p>
-
-              <Link
-                href="/about"
-                className={styles.aboutLink}
-              >
-                Explore the Center
-                <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-
-            <div
-              className={styles.aboutVisual}
-              aria-hidden="true"
-            >
-              <div className={styles.aboutVisualGrid} />
-
-              <div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitOne}`}
-/>
-
-<div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitTwo}`}
-/>
-
-<div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitThree}`}
-/>
-
-              <div className={styles.aboutCenterPoint}>
-                <span />
-              </div>
-
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeOne}`}
-              />
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeTwo}`}
-              />
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeThree}`}
-              />
-            </div>
-          </div>
-        </section>
       </main>
     </div>
   );
