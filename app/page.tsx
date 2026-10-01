@@ -564,6 +564,97 @@ export default function Home() {
           </div>
         </section>
 
+
+        {/* =========================================
+            AIRSPACE VISUALIZATION
+            ========================================= */}
+
+        <section className={styles.airspaceSection}>
+          <div className={styles.airspaceContainer}>
+
+            <div className={styles.airspaceCopy}>
+              <p className={styles.sectionEyebrow}>
+                AIRSPACE
+              </p>
+
+              <h2 className={styles.airspaceTitle}>
+                A connected view of airspace.
+              </h2>
+
+              <p className={styles.airspaceText}>
+                Airspace is a structured environment of routes, sectors,
+                flows and interconnected aviation activities. NASMC supports
+                its planning and development within its defined legal mandate.
+              </p>
+
+              <Link
+                href="/our-role"
+                className={styles.airspaceLink}
+              >
+                Discover how NASMC contributes
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
+            <div
+              className={styles.airspaceVisual}
+              aria-hidden="true"
+            >
+              <div className={styles.airspaceGrid} />
+
+              <div className={`${styles.airspaceSector} ${styles.sectorOne}`}>
+                <span>SECTOR 01</span>
+              </div>
+
+              <div className={`${styles.airspaceSector} ${styles.sectorTwo}`}>
+                <span>SECTOR 02</span>
+              </div>
+
+              <div className={`${styles.airspaceSector} ${styles.sectorThree}`}>
+                <span>SECTOR 03</span>
+              </div>
+
+              <div className={styles.route routeOne} />
+              <div className={styles.route routeTwo} />
+              <div className={styles.route routeThree} />
+              <div className={styles.route routeFour} />
+
+              <div className={`${styles.airspaceNode} ${styles.nodeOne}`}>
+                <span />
+              </div>
+
+              <div className={`${styles.airspaceNode} ${styles.nodeTwo}`}>
+                <span />
+              </div>
+
+              <div className={`${styles.airspaceNode} ${styles.nodeThree}`}>
+                <span />
+              </div>
+
+              <div className={`${styles.airspaceNode} ${styles.nodeFour}`}>
+                <span />
+              </div>
+
+              <div className={styles.airspaceCenter}>
+                <div className={styles.airspaceCenterPulse} />
+                <span />
+              </div>
+
+              <div className={styles.flowLine} />
+              <div className={styles.flowLineTwo} />
+
+              <div className={styles.visualLabel visualLabelTop}>
+                AIRSPACE
+              </div>
+
+              <div className={styles.visualLabel visualLabelBottom}>
+                ROUTES · FLOW · CONNECTIONS
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </main>
     </div>
   );
