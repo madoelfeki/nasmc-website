@@ -14,27 +14,26 @@ export default function Home() {
 
   const navRef = useRef<HTMLElement>(null);
 
-useEffect(() => {
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 40);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
 
-  handleScroll();
+    handleScroll();
 
-  window.addEventListener("scroll", handleScroll, {
-    passive: true,
-  });
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
 
-      // Close desktop dropdown when clicking outside the navigation
       if (
         openMenu &&
         navRef.current &&
@@ -43,7 +42,6 @@ useEffect(() => {
         setOpenMenu(null);
       }
 
-      // Close mobile menu when clicking outside it
       const element = event.target as HTMLElement;
 
       if (
@@ -74,10 +72,10 @@ useEffect(() => {
           ========================================= */}
 
       <header
-  className={`site-header${
-    isScrolled ? " site-header-scrolled" : ""
-  }`}
->
+        className={`site-header${
+          isScrolled ? " site-header-scrolled" : ""
+        }`}
+      >
         {/* Logo */}
         <div className="brand">
           <Link href="/" aria-label="NASMC Home">
@@ -136,9 +134,13 @@ useEffect(() => {
             {openMenu === "activities" && (
               <div className="dropdown-menu">
                 <Link href="/services">Services</Link>
-                <Link href="/projects">Projects & Initiatives</Link>
+                <Link href="/projects">
+                  Projects & Initiatives
+                </Link>
                 <Link href="/training">Training</Link>
-                <Link href="/research">Research & Studies</Link>
+                <Link href="/research">
+                  Research & Studies
+                </Link>
               </div>
             )}
           </div>
@@ -155,7 +157,9 @@ useEffect(() => {
             {openMenu === "knowledge" && (
               <div className="dropdown-menu">
                 <Link href="/news">News</Link>
-                <Link href="/announcements">Announcements</Link>
+                <Link href="/announcements">
+                  Announcements
+                </Link>
                 <Link href="/documents">
                   Publications & Documents
                 </Link>
@@ -379,7 +383,7 @@ useEffect(() => {
           HERO
           ========================================= */}
 
-      <main className={styles.main}>
+      <main className={`${styles.main} site-main`}>
         <section className={styles.hero}>
           <div
             className={styles.heroBackground}
@@ -388,7 +392,9 @@ useEffect(() => {
             <div className={styles.heroGrid} />
             <div className={styles.heroOrb} />
             <div className={styles.heroFlightPath} />
-            <div className={styles.heroFlightPathSecondary} />
+            <div
+              className={styles.heroFlightPathSecondary}
+            />
           </div>
 
           <div className={styles.heroContent}>
@@ -403,12 +409,15 @@ useEffect(() => {
             </h1>
 
             <p className={styles.description}>
-              The official digital gateway of the National Airspace
-              Management Center, Egypt.
+              The official digital gateway of the National
+              Airspace Management Center, Egypt.
             </p>
 
             <div className={styles.ctas}>
-              <Link href="/about" className={styles.primary}>
+              <Link
+                href="/about"
+                className={styles.primary}
+              >
                 Discover NASMC
               </Link>
 
@@ -434,74 +443,6 @@ useEffect(() => {
             </div>
 
             <div className="flight-dot" />
-          </div>
-        </section>
-
-        {/* =========================================
-            ABOUT NASMC
-            ========================================= */}
-
-        <section className={styles.aboutSection}>
-          <div className={styles.aboutContainer}>
-            <div className={styles.aboutContent}>
-              <p className={styles.sectionEyebrow}>
-                ABOUT NASMC
-              </p>
-
-              <h2 className={styles.aboutTitle}>
-                Supporting the development and efficient use of
-                Egypt&apos;s airspace.
-              </h2>
-
-              <p className={styles.aboutText}>
-                The National Airspace Management Center is a public
-                economic authority established to support the
-                development, planning and efficient management of
-                Egypt&apos;s airspace, within its defined legal
-                mandate.
-              </p>
-
-              <Link
-                href="/about"
-                className={styles.aboutLink}
-              >
-                Explore the Center
-                <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-
-            <div
-              className={styles.aboutVisual}
-              aria-hidden="true"
-            >
-              <div className={styles.aboutVisualGrid} />
-
-              <div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitOne}`}
-/>
-
-<div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitTwo}`}
-/>
-
-<div
-  className={`${styles.aboutOrbit} ${styles.aboutOrbitThree}`}
-/>
-
-              <div className={styles.aboutCenterPoint}>
-                <span />
-              </div>
-
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeOne}`}
-              />
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeTwo}`}
-              />
-              <div
-                className={`${styles.aboutNode} ${styles.aboutNodeThree}`}
-              />
-            </div>
           </div>
         </section>
       </main>
