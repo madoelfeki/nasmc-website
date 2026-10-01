@@ -28,7 +28,9 @@ export default function AppearanceSelector({
   mobile?: boolean;
 }) {
   const { theme, setTheme } = useNASMCTheme();
-  const chooseTheme = (value: string) => {
+  const chooseTheme = (
+  value: "light" | "dark" | "system"
+) => {
   sessionStorage.setItem("nasmc-theme-session", value);
   setTheme(value);
   setOpen(false);
