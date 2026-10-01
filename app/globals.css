@@ -62,6 +62,38 @@ a {
 /* =========================================================
    HEADER
    ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  transition:
+    min-height 0.25s ease,
+    padding 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.site-header-scrolled {
+  min-height: 64px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  background: color-mix(
+    in srgb,
+    var(--nasmc-header-bg) 94%,
+    transparent
+  );
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.site-header-scrolled .brand img {
+  width: 54px;
+  height: 54px;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease;
+}
 
 .site-header {
   position: relative;
