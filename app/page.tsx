@@ -433,6 +433,75 @@ export default function Home() {
         </section>
 
         {/* =========================================
+            OUR ROLE
+            ========================================= */}
+
+        <section className={styles.roleSection}>
+          <div className={styles.roleContainer}>
+            <div className={styles.roleIntro}>
+              <p className={styles.sectionEyebrow}>OUR ROLE</p>
+
+              <h2 className={styles.roleTitle}>
+                Supporting the planning, development and efficient use of
+                Egypt&apos;s airspace.
+              </h2>
+
+              <p className={styles.roleText}>
+                NASMC works within its defined legal mandate to support the
+                planning, development and optimal use of Egypt&apos;s airspace,
+                and to contribute to the safety and efficiency of air navigation
+                services.
+              </p>
+            </div>
+
+            <div className={styles.roleGrid}>
+              <article className={styles.roleCard}>
+                <span className={styles.roleNumber}>01</span>
+                <h3>Airspace Planning &amp; Development</h3>
+                <p>
+                  Planning, designing and developing airways and terminal areas
+                  within the Center&apos;s defined responsibilities.
+                </p>
+              </article>
+
+              <article className={styles.roleCard}>
+                <span className={styles.roleNumber}>02</span>
+                <h3>Aviation Studies &amp; Technical Support</h3>
+                <p>
+                  Conducting technical studies and providing technical advice,
+                  information and services related to air navigation.
+                </p>
+              </article>
+
+              <article className={styles.roleCard}>
+                <span className={styles.roleNumber}>03</span>
+                <h3>Airspace Efficiency &amp; Traffic Flow</h3>
+                <p>
+                  Contributing to the planning of routes and the organization of
+                  air traffic flow to support efficient use of airspace.
+                </p>
+              </article>
+
+              <article className={styles.roleCard}>
+                <span className={styles.roleNumber}>04</span>
+                <h3>Training &amp; Qualification</h3>
+                <p>
+                  Supporting training and qualification activities within the
+                  Center&apos;s legal mandate.
+                </p>
+              </article>
+            </div>
+
+            <div className={styles.roleLinkWrap}>
+              <Link href="/our-role" className={styles.aboutLink}>
+                Explore Our Role
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================
             ABOUT NASMC
             ========================================= */}
 

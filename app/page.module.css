@@ -1035,3 +1035,166 @@ a.secondary:hover {
     background-size: 34px 34px;
   }
 }
+
+/* =========================================
+   OUR ROLE
+   ========================================= */
+
+.roleSection {
+  position: relative;
+  width: 100%;
+  padding: 120px 0;
+  background: var(--nasmc-white);
+  border-top: 1px solid var(--nasmc-border);
+}
+
+.roleContainer {
+  width: min(1180px, calc(100% - 96px));
+  margin: 0 auto;
+}
+
+.roleIntro {
+  max-width: 820px;
+}
+
+.roleTitle {
+  margin: 0;
+  max-width: 820px;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 650;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  color: var(--nasmc-text);
+  text-wrap: balance;
+}
+
+.roleText {
+  margin: 28px 0 0;
+  max-width: 700px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--nasmc-muted);
+}
+
+.roleGrid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--nasmc-border);
+  border-bottom: 1px solid var(--nasmc-border);
+}
+
+.roleCard {
+  position: relative;
+  min-height: 270px;
+  padding: 32px 28px 34px;
+  border-inline-end: 1px solid var(--nasmc-border);
+}
+
+.roleCard:last-child {
+  border-inline-end: 0;
+}
+
+.roleNumber {
+  display: block;
+  margin-bottom: 55px;
+  color: var(--nasmc-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.roleCard h3 {
+  margin: 0;
+  max-width: 230px;
+  font-size: 1.12rem;
+  line-height: 1.35;
+  font-weight: 650;
+  color: var(--nasmc-text);
+}
+
+.roleCard p {
+  margin: 14px 0 0;
+  max-width: 250px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--nasmc-muted);
+}
+
+.roleLinkWrap {
+  margin-top: 28px;
+}
+
+@media (max-width: 1100px) {
+  .roleSection {
+    padding: 100px 0;
+  }
+
+  .roleContainer {
+    width: min(900px, calc(100% - 72px));
+  }
+
+  .roleGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .roleCard:nth-child(2) {
+    border-inline-end: 0;
+  }
+
+  .roleCard:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--nasmc-border);
+  }
+}
+
+@media (max-width: 760px) {
+  .roleSection {
+    padding: 84px 24px;
+  }
+
+  .roleContainer {
+    width: 100%;
+  }
+
+  .roleTitle {
+    font-size: clamp(2.55rem, 10vw, 3.8rem);
+  }
+
+  .roleText {
+    font-size: 1rem;
+  }
+
+  .roleGrid {
+    margin-top: 54px;
+    grid-template-columns: 1fr;
+  }
+
+  .roleCard {
+    min-height: auto;
+    padding: 28px 0;
+    border-inline-end: 0;
+    border-bottom: 1px solid var(--nasmc-border);
+  }
+
+  .roleCard:nth-child(2) {
+    border-inline-end: 0;
+  }
+
+  .roleCard:last-child {
+    border-bottom: 0;
+  }
+
+  .roleNumber {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .roleSection {
+    padding: 72px 20px;
+  }
+
+  .roleTitle {
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+  }
+}
