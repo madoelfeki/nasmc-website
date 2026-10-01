@@ -62,16 +62,6 @@ a {
 /* =========================================================
    HEADER
    ========================================================= */
-.site-header {
-  position: sticky;
-  top: 0;
-  transition:
-    min-height 0.25s ease,
-    padding 0.25s ease,
-    background-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
 .site-header-scrolled {
   min-height: 64px;
   padding-top: 0;
@@ -97,8 +87,13 @@ a {
 
 .site-header {
   position: sticky;
-top: 0;
-z-index: 100;
+  top: 0;
+  z-index: 100;
+  transition:
+    min-height 0.25s ease,
+    padding 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
   width: 100%;
   min-height: 80px;
   display: flex;
