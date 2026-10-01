@@ -20,7 +20,7 @@ const options = [
     label: "System",
     icon: "◐",
   },
-];
+] as const;
 
 export default function AppearanceSelector({
   mobile = false,
