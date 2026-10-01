@@ -614,10 +614,10 @@ export default function Home() {
                 <span>SECTOR 03</span>
               </div>
 
-              <div className={styles.route routeOne} />
-              <div className={styles.route routeTwo} />
-              <div className={styles.route routeThree} />
-              <div className={styles.route routeFour} />
+              <div className={`${styles.route} ${styles.routeOne}`} />
+              <div className={`${styles.route} ${styles.routeTwo}`} />
+              <div className={`${styles.route} ${styles.routeThree}`} />
+              <div className={`${styles.route} ${styles.routeFour}`} />
 
               <div className={`${styles.airspaceNode} ${styles.nodeOne}`}>
                 <span />
@@ -643,11 +643,11 @@ export default function Home() {
               <div className={styles.flowLine} />
               <div className={styles.flowLineTwo} />
 
-              <div className={styles.visualLabel visualLabelTop}>
+              <div className={`${styles.visualLabel} ${styles.visualLabelTop}`}>
                 AIRSPACE
               </div>
 
-              <div className={styles.visualLabel visualLabelBottom}>
+              <div className={`${styles.visualLabel} ${styles.visualLabelBottom}`}>
                 ROUTES · FLOW · CONNECTIONS
               </div>
             </div>
