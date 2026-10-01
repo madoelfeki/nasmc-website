@@ -1,150 +1,633 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--nasmc-white);
+  color: var(--nasmc-text);
 }
 
 .main {
-  display: flex;
-  flex: 1;
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  max-width: none;
+  min-height: calc(100vh - 80px);
+  margin: 0;
+  padding: 0;
+  background: transparent;
 }
 
-.intro {
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 25%,
+      rgba(11, 95, 165, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 80%,
+      rgba(200, 162, 77, 0.08),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      var(--nasmc-hero-start) 0%,
+      var(--nasmc-hero-end) 100%
+    );
+}
+
+/* Subtle aviation / airspace feeling */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  right: -280px;
+  top: -260px;
+  border: 1px solid rgba(11, 95, 165, 0.10);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  right: -170px;
+  top: -150px;
+  border: 1px solid rgba(11, 95, 165, 0.07);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* =========================================
+   HERO CONTENT
+   ========================================= */
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 96px));
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+
+  gap: 28px;
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
+/* =========================================
+   EYEBROW
+   ========================================= */
+
+.eyebrow {
+  margin: 0;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+
+  color: var(--nasmc-blue);
+  text-transform: uppercase;
+}
+
+/* =========================================
+   MAIN HEADING
+   ========================================= */
+
+.heroContent h1 {
+  margin: 0;
+
+  max-width: 900px;
+
+  font-size: clamp(4.5rem, 7vw, 7.8rem);
+  font-weight: 700;
+  line-height: 0.91;
+  letter-spacing: -0.065em;
+
+  color: var(--nasmc-text);
   text-wrap: balance;
-  color: var(--text-primary);
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.description {
+  margin: 0;
+
+  max-width: 650px;
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+
+  color: var(--nasmc-muted);
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
+/* =========================================
+   CTA BUTTONS
+   ========================================= */
 
 .ctas {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+  align-items: center;
+
+  gap: 14px;
+  margin-top: 8px;
 }
 
 .ctas a {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 26px;
+
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+.ctas a:hover {
+  transform: translateY(-2px);
+}
+
+/* Primary */
 
 a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+  background: var(--nasmc-blue);
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(11, 95, 165, 0.18);
 }
+
+a.primary:hover {
+  background: var(--nasmc-navy);
+
+  box-shadow:
+    0 14px 34px rgba(11, 95, 165, 0.25);
+}
+
+/* Secondary */
 
 a.secondary {
-  border-color: var(--button-secondary-border);
+  background: transparent;
+  color: var(--nasmc-text);
+
+  border: 1px solid var(--nasmc-border);
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+a.secondary:hover {
+  background: rgba(11, 95, 165, 0.05);
+  border-color: rgba(11, 95, 165, 0.25);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .hero {
+    min-height: calc(100vh - 72px);
   }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  .heroContent {
+    width: min(900px, calc(100% - 72px));
+    gap: 26px;
+  }
+
+  .heroContent h1 {
+    max-width: 760px;
+    font-size: clamp(4rem, 9vw, 6.5rem);
+  }
+
+  .description {
+    max-width: 620px;
   }
 }
 
-@media (max-width: 600px) {
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 760px) {
   .main {
-    padding: 48px 24px;
+    min-height: calc(100svh - 72px);
   }
 
-  .intro {
-    gap: 16px;
+  .hero {
+  min-height: calc(100svh - 72px);
+  padding: 52px 24px 40px;
+
+    align-items: flex-start;
   }
 
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
+  .heroContent {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .eyebrow {
+    max-width: 300px;
+
+    font-size: 0.72rem;
+    line-height: 1.5;
+    letter-spacing: 0.14em;
+  }
+
+  .heroContent h1 {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+
+  font-size: clamp(3.25rem, 9vw, 4rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+}
+
+  .description {
+    width: 100%;
+    max-width: 520px;
+
+    font-size: 1.03rem;
+    line-height: 1.65;
+  }
+
+  .ctas {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+    margin-top: 6px;
+  }
+
+  .ctas a {
+    width: 100%;
+    min-height: 54px;
+
+    padding: 0 20px;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 52px 20px 48px;
   }
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+  .heroContent {
+    gap: 19px;
+  }
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+ .heroContent h1 {
+  font-size: clamp(3rem, 10vw, 3.5rem);
+  line-height: 0.96;
+}
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .ctas {
+    margin-top: 4px;
   }
 }
 
-.code {
-  font-family: var(--font-geist-mono);
-  font-size: 0.9em;
-  background: color-mix(in srgb, currentColor 8%, transparent);
-  padding: 0.1em 0.4em;
-  border-radius: 6px;
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 360px) {
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.75rem;
+  }
+}
+
+/* =========================================
+   HERO VISUAL SYSTEM
+   ========================================= */
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heroGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(11, 95, 165, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 95, 165, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 45%,
+    black 100%
+  );
+}
+
+.heroOrb {
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: -120px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(11, 95, 165, 0.10) 0%,
+      rgba(11, 95, 165, 0.035) 42%,
+      transparent 70%
+    );
+
+  filter: blur(2px);
+}
+
+.heroFlightPath,
+.heroFlightPathSecondary {
+  position: absolute;
+
+  width: 620px;
+  height: 280px;
+
+  right: -40px;
+  top: 50%;
+
+  border: 1px solid rgba(11, 95, 165, 0.10);
+  border-radius: 50%;
+
+  transform: rotate(-18deg);
+}
+
+.heroFlightPathSecondary {
+  width: 520px;
+  height: 220px;
+
+  right: 20px;
+  top: 54%;
+
+  border-color: rgba(200, 162, 77, 0.10);
+
+  transform: rotate(-18deg);
+}
+
+/* =========================================
+   AIRSPACE VISUAL
+   ========================================= */
+
+.heroVisual {
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: -70px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.airspace-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border: 1px solid rgba(11, 95, 165, 0.13);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.ring-one {
+  width: 560px;
+  height: 560px;
+}
+
+.ring-two {
+  width: 410px;
+  height: 410px;
+
+  border-color: rgba(11, 95, 165, 0.16);
+}
+
+.ring-three {
+  width: 260px;
+  height: 260px;
+
+  border-color: rgba(200, 162, 77, 0.18);
+}
+
+.airspace-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid var(--nasmc-blue);
+  border-radius: 50%;
+
+  background: var(--nasmc-white);
+
+  box-shadow:
+    0 0 0 8px rgba(11, 95, 165, 0.06),
+    0 0 30px rgba(11, 95, 165, 0.18);
+}
+
+.airspace-center span {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: var(--nasmc-blue);
+}
+
+.flight-dot {
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  left: 23%;
+  top: 28%;
+
+  border-radius: 50%;
+
+  background: var(--nasmc-gold);
+
+  box-shadow:
+    0 0 0 5px rgba(200, 162, 77, 0.08),
+    0 0 20px rgba(200, 162, 77, 0.25);
+
+  animation: flightPulse 3s ease-in-out infinite;
+}
+
+@keyframes flightPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+/* =========================================
+   HERO VISUAL — RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .heroVisual {
+    width: 500px;
+    height: 500px;
+
+    right: -150px;
+  }
+
+  .ring-one {
+    width: 460px;
+    height: 460px;
+  }
+
+  .ring-two {
+    width: 340px;
+    height: 340px;
+  }
+
+  .ring-three {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 760px) {
+  .heroVisual {
+    width: 360px;
+    height: 360px;
+
+    right: -180px;
+    top: 38%;
+
+    opacity: 0.55;
+  }
+
+  .ring-one {
+    width: 340px;
+    height: 340px;
+  }
+
+  .ring-two {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ring-three {
+    width: 160px;
+    height: 160px;
+  }
+
+  .heroFlightPath,
+  .heroFlightPathSecondary {
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroVisual {
+    right: -210px;
+    top: 34%;
+
+    opacity: 0.42;
+  }
+
+  .heroGrid {
+    background-size: 48px 48px;
+  }
 }
