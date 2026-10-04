@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "./theme-provider";
 import Script from "next/script";
+import HomeScrollRestoration from "./components/HomeScrollRestoration";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,18 +21,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://nasmc.gov.eg"),
 
   title: {
-    default: "National Airspace Management Center | NASMC",
+    default: "National AirSpace Management Center | NASMC",
     template: "%s | NASMC",
   },
 
   description:
-    "Official Digital Gateway of the National Airspace Management Center (NASMC), Egypt.",
+    "Official Digital Gateway of the National AirSpace Management Center (NASMC), Egypt.",
 
-  applicationName: "National Airspace Management Center",
+  applicationName: "National AirSpace Management Center",
 
   keywords: [
     "NASMC",
-    "National Airspace Management Center",
+    "National AirSpace Management Center",
     "Airspace Management Egypt",
     "Egyptian Airspace",
     "إدارة المجال الجوي",
@@ -43,10 +46,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    siteName: "National Airspace Management Center",
-    title: "National Airspace Management Center | NASMC",
+    siteName: "National AirSpace Management Center",
+    title: "National AirSpace Management Center | NASMC",
     description:
-      "Official Digital Gateway of the National Airspace Management Center (NASMC), Egypt.",
+      "Official Digital Gateway of the National AirSpace Management Center (NASMC), Egypt.",
     url: "https://nasmc.gov.eg",
     locale: "en_EG",
   },
@@ -56,14 +59,22 @@ export default function RootLayout({
   children,
 }: LayoutProps<"/">) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html
+      lang="en"
+      dir="ltr"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Script
         src="/theme-init.js"
         strategy="beforeInteractive"
         />
+        <HomeScrollRestoration />
         <ThemeProvider>
+          <SiteHeader />
           {children}
+          <SiteFooter />
         </ThemeProvider>
       </body>
     </html>

@@ -1534,8 +1534,7 @@ a.secondary:hover {
 }
 
 .trainingKnowledgeContainer,
-.contactCtaContainer,
-.siteFooterContainer {
+.contactCtaContainer {
   width: min(1180px, calc(100% - 96px));
   margin: 0 auto;
 }
@@ -1607,8 +1606,7 @@ a.secondary:hover {
   text-decoration: none;
 }
 
-.learningPreviewLink:hover,
-.siteFooterNav a:hover {
+.learningPreviewLink:hover {
   color: var(--nasmc-blue);
 }
 
@@ -1667,79 +1665,13 @@ a.secondary:hover {
   filter: brightness(1.06);
 }
 
-.siteFooter {
-  padding: 27px 0 18px;
-  background: var(--nasmc-white);
-  color: var(--nasmc-text);
-}
-
-.siteFooterContainer {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
-  align-items: center;
-  column-gap: 40px;
-  row-gap: 19px;
-}
-
-.siteFooterBrand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--nasmc-text);
-  font-size: 0.82rem;
-  font-weight: 650;
-  line-height: 1.3;
-  text-decoration: none;
-}
-
-.siteFooterBrand img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-}
-
-.siteFooterIdentity > p {
-  margin: 5px 0 0;
-  margin-inline-start: 48px;
-  color: var(--nasmc-muted);
-  font-size: 0.72rem;
-}
-
-.siteFooterNav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 9px 18px;
-}
-
-.siteFooterNav a {
-  color: var(--nasmc-muted);
-  font-size: 0.76rem;
-  font-weight: 550;
-  text-decoration: none;
-  transition: color 0.18s ease;
-}
-
-.siteFooterBottom {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding-top: 13px;
-  border-top: 1px solid var(--nasmc-border);
-  color: var(--nasmc-muted);
-  font-size: 0.68rem;
-}
-
 @media (max-width: 760px) {
   .trainingKnowledgeSection {
     padding: 58px 0;
   }
 
   .trainingKnowledgeContainer,
-  .contactCtaContainer,
-  .siteFooterContainer {
+  .contactCtaContainer {
     width: calc(100% - 40px);
   }
 
@@ -1758,15 +1690,6 @@ a.secondary:hover {
     gap: 20px;
   }
 
-  .siteFooterContainer {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .siteFooterNav {
-    justify-content: flex-start;
-    gap: 10px 15px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1777,10 +1700,6 @@ a.secondary:hover {
     padding: 18px;
   }
 
-  .siteFooterBottom {
-    flex-direction: column;
-    gap: 5px;
-  }
 }
 
 /* =========================================
@@ -3100,6 +3019,7 @@ a.secondary:hover {
 
 .aboutSection {
   padding: 80px 0;
+  scroll-margin-top: 80px;
 }
 
 .aboutContainer {
@@ -3117,6 +3037,7 @@ a.secondary:hover {
 
 .roleSection {
   padding: 80px 0;
+  scroll-margin-top: 80px;
 }
 
 .roleTitle {
@@ -3327,6 +3248,11 @@ a.secondary:hover {
   .roleSection,
   .airspaceSection {
     padding-block: 68px;
+  }
+
+  .aboutSection,
+  .roleSection {
+    scroll-margin-top: 76px;
   }
 
   .aboutContainer {

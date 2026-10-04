@@ -1,24 +1,19 @@
-import Link from "next/link";
+import InternalPageHero from "../components/InternalPageHero";
 
 export const metadata = {
   title: "News & Updates | NASMC",
   description:
-    "Official news and institutional updates from the National Airspace Management Center.",
+    "Official news and institutional updates from the National AirSpace Management Center.",
 };
 
 export default function NewsPage() {
   return (
-    <main className="role-detail-page">
-      <section className="role-detail-hero">
-        <div className="role-detail-inner">
-          <p className="role-detail-eyebrow">NEWS &amp; UPDATES</p>
-          <h1>News &amp; Updates</h1>
-          <p>Official news will be published here.</p>
-          <Link href="/" className="role-detail-back">
-            ← Back to NASMC
-          </Link>
-        </div>
-      </section>
+    <main>
+      <InternalPageHero
+        eyebrow="NEWS & UPDATES"
+        title="News & Updates"
+        description="Official news will be published here."
+      />
     </main>
   );
 }

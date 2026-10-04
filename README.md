@@ -1,8 +1,8 @@
 # NASMC Official Digital Gateway
 
-## National Airspace Management Center — Egypt
+## National AirSpace Management Center — Egypt
 
-Official Digital Gateway project for the National Airspace Management Center (NASMC).
+Official Digital Gateway project for the National AirSpace Management Center (NASMC).
 
 ### Development Preview
 
@@ -12,4 +12,4 @@ The current version is a design and development preview and is not the final pro
 
 ---
 
-**NASMC — National Airspace Management Center, Egypt**
+**NASMC — National AirSpace Management Center, Egypt**

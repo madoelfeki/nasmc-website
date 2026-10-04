@@ -1,0 +1,47 @@
+.hero {
+  padding: 146px 24px 76px;
+  background:
+    radial-gradient(circle at 82% 35%, rgba(11, 95, 165, 0.12), transparent 34%),
+    linear-gradient(135deg, var(--nasmc-hero-start), var(--nasmc-hero-end));
+  color: var(--nasmc-text);
+}
+
+.content {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--nasmc-blue);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+}
+
+.content h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 620px;
+  margin: 24px 0 0;
+  color: var(--nasmc-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 116px 20px 60px;
+  }
+
+  .content h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+}
