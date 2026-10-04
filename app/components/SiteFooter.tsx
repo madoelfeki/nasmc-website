@@ -19,7 +19,7 @@ export default function SiteFooter() {
       <div className={styles.container}>
         <div className={styles.identityBlock}>
           <Link href="/" aria-label="NASMC home" className={styles.identity}>
-            <Image src="/images/nasmc-logo.svg" alt="" width={48} height={48} />
+            <Image src="/images/nasmc-logo-full.png" alt="" width={1252} height={1222} />
             <span>National AirSpace Management Center</span>
           </Link>
           <p>Official Digital Gateway of NASMC, Egypt.</p>

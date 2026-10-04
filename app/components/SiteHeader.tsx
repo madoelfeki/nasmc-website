@@ -46,24 +46,30 @@ export default function SiteHeader() {
   };
 
   const closeMobileMenu = () => setMenuOpen(false);
+  const handleHomeClick = () => {
+    setMenuOpen(false);
+    if (window.location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
       <header className={`site-header${isScrolled ? " site-header-scrolled" : ""}`}>
         <div className="brand">
-          <Link href="/" aria-label="NASMC Home">
+          <Link href="/" aria-label="NASMC Home" onClick={handleHomeClick}>
             <Image
-              src="/images/nasmc-logo.svg"
+              src="/images/nasmc-logo-full.png"
               alt="National AirSpace Management Center"
-              width={76}
-              height={76}
+              width={1252}
+              height={1222}
               priority
             />
           </Link>
         </div>
 
         <nav ref={navRef} className="main-nav" aria-label="Main navigation">
-          <Link href="/">Home</Link>
+          <Link href="/" onClick={handleHomeClick}>Home</Link>
 
           <div className="nav-dropdown">
             <button type="button" onClick={() => toggleMenu("center")} aria-expanded={openMenu === "center"}>
@@ -133,7 +139,7 @@ export default function SiteHeader() {
 
       {menuOpen && (
         <div className="mobile-menu">
-          <Link href="/" onClick={closeMobileMenu}>Home</Link>
+          <Link href="/" onClick={handleHomeClick}>Home</Link>
 
           <button type="button" onClick={() => toggleMenu("mobile-center")} aria-expanded={openMenu === "mobile-center"}>
             The Center <span>›</span>
