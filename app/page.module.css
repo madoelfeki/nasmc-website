@@ -3250,6 +3250,10 @@ a.secondary:hover {
     padding-block: 68px;
   }
 
+  .roleSection {
+    padding-inline: 20px;
+  }
+
   .aboutSection,
   .roleSection {
     scroll-margin-top: 76px;
@@ -3264,6 +3268,14 @@ a.secondary:hover {
   .airspaceText {
     font-size: 1.03rem;
     line-height: 1.72;
+  }
+
+  .aboutText {
+    margin-inline: 20px;
+  }
+
+  .aboutContent > .aboutLink {
+    margin-inline: 20px;
   }
 
   .roleGrid {

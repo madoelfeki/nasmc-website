@@ -16,10 +16,12 @@ const footerLinks = [
 export default function SiteFooter() {
   return (
     <footer className={styles.siteFooter}>
+      <div className={styles.visual} aria-hidden="true">
+        <Image src="/images/nasmc-logo-dark.png" alt="" width={1252} height={1222} />
+      </div>
       <div className={styles.container}>
         <div className={styles.identityBlock}>
           <Link href="/" aria-label="NASMC home" className={styles.identity}>
-            <Image src="/images/nasmc-logo-full.png" alt="" width={1252} height={1222} />
             <span>National AirSpace Management Center</span>
           </Link>
           <p>Official Digital Gateway of NASMC, Egypt.</p>
